@@ -16,6 +16,7 @@ version = "1.0-SNAPSHOT"
 
 val jaicf = "1.2.4"
 val logback = "1.2.10"
+val ktor = "1.5.1"
 
 repositories {
     mavenLocal()
@@ -34,6 +35,12 @@ dependencies {
     implementation("com.just-ai.jaicf:core:$jaicf")
     implementation("com.just-ai.jaicf:jaicp:$jaicf")
     implementation("com.just-ai.jaicf:caila:$jaicf")
+    implementation("com.just-ai.jaicf:telegram:$jaicf")
+
+    implementation("io.ktor:ktor-client-serialization:$ktor")
+    implementation("io.ktor:ktor-client-apache:$ktor")
+    implementation("io.ktor:ktor-client-features:$ktor")
+    implementation("io.ktor:ktor-client-jackson:$ktor")
 
     implementation("org.apache.httpcomponents:httpclient:4.5.13")
 
