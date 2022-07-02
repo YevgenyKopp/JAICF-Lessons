@@ -1,3 +1,5 @@
+@file:Suppress("UNCHECKED_CAST")
+
 package com.justai.lessons.services
 
 import org.springframework.context.ApplicationContext

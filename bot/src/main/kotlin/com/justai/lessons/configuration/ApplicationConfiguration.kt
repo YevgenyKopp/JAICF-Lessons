@@ -10,7 +10,7 @@ import com.justai.jaicf.channel.jaicp.JaicpWebhookConnector
 import com.justai.jaicf.channel.jaicp.channels.TelephonyChannel
 import com.justai.jaicf.channel.jaicp.logging.JaicpConversationLogger
 import com.justai.jaicf.logging.Slf4jConversationLogger
-import com.justai.lessons.scenario.startScenario
+import com.justai.lessons.scenario.mainScenario
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
@@ -21,7 +21,7 @@ class ApplicationConfiguration(
     @Bean
     fun botApi() =
         BotEngine(
-            scenario = startScenario,
+            scenario = mainScenario,
             activators = arrayOf(
                 createCailaActivator(botConfiguration.token),
                 RegexActivator,
