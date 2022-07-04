@@ -7,6 +7,3 @@ spring:
 
 server:
   port: 10010
-
-bot:
-  token: 9e2483ae-54c7-45c0-9dc1-6e1ec3d9f1d6

@@ -5,12 +5,9 @@ import com.justai.jaicf.activator.caila.CailaIntentActivator
 import com.justai.jaicf.activator.caila.CailaNLUSettings
 import com.justai.jaicf.activator.catchall.CatchAllActivator
 import com.justai.jaicf.activator.regex.RegexActivator
-import com.justai.jaicf.api.BotApi
-import com.justai.jaicf.channel.jaicp.JaicpWebhookConnector
-import com.justai.jaicf.channel.jaicp.channels.TelephonyChannel
 import com.justai.jaicf.channel.jaicp.logging.JaicpConversationLogger
 import com.justai.jaicf.logging.Slf4jConversationLogger
-import com.justai.lessons.scenario.mainScenario
+import com.justai.lessons.scenario.startScenario
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
@@ -21,7 +18,7 @@ class ApplicationConfiguration(
     @Bean
     fun botApi() =
         BotEngine(
-            scenario = mainScenario,
+            scenario = startScenario,
             activators = arrayOf(
                 createCailaActivator(botConfiguration.token),
                 RegexActivator,
@@ -31,14 +28,6 @@ class ApplicationConfiguration(
                 JaicpConversationLogger(botConfiguration.token),
                 Slf4jConversationLogger()
             )
-        )
-
-    @Bean
-    fun jaicpWebhookConnector(botApi: BotApi) =
-        JaicpWebhookConnector(
-            botApi = botApi,
-            accessToken = botConfiguration.token,
-            channels = listOf(TelephonyChannel)
         )
 
     companion object {

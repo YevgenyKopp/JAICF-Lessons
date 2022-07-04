@@ -5,4 +5,5 @@ import com.justai.lessons.services.bean
 import com.justai.lessons.services.currency.CurrencyService
 
 val ElephantService by bean<ElephantService>()
+
 val CurrencyService by bean<CurrencyService>()
