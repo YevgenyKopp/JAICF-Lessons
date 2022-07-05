@@ -1,6 +1,6 @@
 package com.justai.lessons.services.currency.model
 
-data class Currency(
+data class CurrencyRates(
     val disclaimer: String,
     val date: String,
     val timestamp: Long,
