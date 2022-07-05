@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4f4af71-0ee4-4dcf-a3f1-4e16af39278b" name="Changes" comment="add gitignore">
-      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/serializers/Kotlinx.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/serializers/Slots.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+    <list default="true" id="c4f4af71-0ee4-4dcf-a3f1-4e16af39278b" name="Changes" comment="change gitignore">
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/ActionContextExtensions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/model/CustomCurrency.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/CurrencyScenario.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/StartScenario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/StartScenario.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services/currency/CurrencyService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services/currency/CurrencyService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services/currency/model/Currency.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services/currency/model/CurrencyRates.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +42,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -68,13 +70,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - i-Space/Documents/Repos/hh-bot" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin.scripting" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services/currency" />
       <recent name="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services" />
@@ -112,19 +116,6 @@
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.justai.lessons.MainKt" />
       <module name="lessons-2022.bot.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="lessons-2022" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="lessons-2022" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -174,7 +165,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656945746753</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="change gitignore">
+      <created>1656946325922</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1656946325922</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -193,7 +191,8 @@
     <MESSAGE value="add console and CurrencyService" />
     <MESSAGE value="add main scenario" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="change gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="change gitignore" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
