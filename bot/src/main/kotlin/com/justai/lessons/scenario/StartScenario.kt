@@ -1,10 +1,15 @@
 package com.justai.lessons.scenario
 
+import com.justai.jaicf.activator.caila.caila
+import com.justai.jaicf.activator.caila.cailaEntity
 import com.justai.jaicf.builder.Scenario
-import com.justai.jaicf.channel.jaicp.telephony
+import com.justai.jaicf.channel.jaicp.reactions.telephony
 import com.justai.lessons.extension.ElephantService
+import com.justai.lessons.serializers.CityData
+import com.justai.lessons.serializers.Kotlinx
+import com.justai.lessons.serializers.TimeData
 
-val startScenario = Scenario(telephony) {
+val startScenario = Scenario {
     state(MyStates.START) {
         activators {
             regex("/start")
@@ -13,21 +18,22 @@ val startScenario = Scenario(telephony) {
             reactions.say("Привет, купи слона")
         }
 
-        state(MyStates.BUY_ELEPHANT) {
+        state(MyStates.YES) {
             activators {
                 regex("давай")
             }
             action {
-                reactions.say("Какой именно слон вас интересует")
+                reactions.say("Какой именно слон вас интересует?")
             }
 
-            //Стейт на кастомную сущность
             state("Elephant Type") {
-                activators { }
+                activators {
+                    regex("большой")
+                }
 
                 action {
                     if (ElephantService.isAvailable(request.input)) {
-                        reactions.say("А сколько слонов вам нужно")
+                        reactions.say("Когда вы сможете принять доставку?")
                     } else {
                         reactions.say("Таких слонов у нас нет, назовите других")
                         reactions.changeState("..")
@@ -35,20 +41,24 @@ val startScenario = Scenario(telephony) {
                 }
 
                 //Стейт на встроенную сущность
-                state("Elephant Number") {
-                    activators { }
+                state(MyStates.TIME) {
+                    activators {
+                        cailaEntity("duckling.time")
+                    }
 
                     action {
                         reactions.say("И последнее, в какой город нужно доставить?")
                     }
 
                     //Стейт на встроенную/кастомную сущность
-                    state("City") {
-                        activators { }
+                    state(MyStates.CITY) {
+                        activators {
+                            cailaEntity("City")
+                        }
 
                         action {
                             reactions.say("Всё зафиксировано, ожидайте доставки")
-                            reactions.hangup()
+                            reactions.telephony?.hangup()
                         }
                     }
 
@@ -57,12 +67,32 @@ val startScenario = Scenario(telephony) {
                     }
                 }
                 fallback {
-                    reactions.say("Мм... Не совсем понял, назовите число")
+                    reactions.say("Мм... Не совсем понял, когда посылочку примите?")
                 }
             }
 
             fallback {
                 reactions.say("Я таких слонов не знаю")
+            }
+        }
+
+        state(MyStates.ORDER) {
+            globalActivators {
+                intent("OrderAnAnimal")
+            }
+
+            action {
+                // сущность из слота
+                val cityEntity = activator.caila?.slots?.get("City")
+                val dateEntity = activator.caila?.slots?.get("Time")
+
+                // сериализация
+                val deliveryCity = cityEntity?.let { Kotlinx.decodeFromString(CityData.serializer(), it) }
+                val deliveryTime = dateEntity?.let { Kotlinx.decodeFromString(TimeData.serializer(), it) }
+
+                reactions.say("Всё зафиксировано, ожидайте доставки $deliveryTime " +
+                        "в город $deliveryCity :)")
+                reactions.telephony?.hangup()
             }
         }
 
@@ -74,5 +104,8 @@ val startScenario = Scenario(telephony) {
 
 object MyStates {
     const val START = "Start"
-    const val BUY_ELEPHANT = "Buy"
+    const val YES = "Yes"
+    const val TIME = "DeliveryTime"
+    const val CITY = "DeliveryCity"
+    const val ORDER = "OrderAnAnimal"
 }
