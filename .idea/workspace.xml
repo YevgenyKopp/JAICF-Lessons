@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4f4af71-0ee4-4dcf-a3f1-4e16af39278b" name="Changes" comment="add gitignore" />
+    <list default="true" id="c4f4af71-0ee4-4dcf-a3f1-4e16af39278b" name="Changes" comment="add gitignore">
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/model/CityData.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/model/TimeData.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/ActionContextExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/ActionContextExtensions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/MainScenario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/MainScenario.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +68,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/settings.gradle" />
+    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - i-Space/Documents/JAICF edu/project" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin.scripting" />
@@ -107,6 +112,19 @@
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.justai.lessons.MainKt" />
       <module name="lessons-2022.bot.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="lessons-2022" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="lessons-2022" />
+      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -156,7 +174,14 @@
       <option name="project" value="LOCAL" />
       <updated>1656945746753</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Revert &quot;add caila&quot;&#10;&#10;This reverts commit c5caf506">
+      <created>1657085041240</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1657085041240</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,13 +194,15 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="add console and CurrencyService" />
     <MESSAGE value="add main scenario" />
     <MESSAGE value="add gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="add gitignore" />
+    <MESSAGE value="Revert &quot;add caila&quot;&#10;&#10;This reverts commit c5caf506" />
+    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;add caila&quot;&#10;&#10;This reverts commit c5caf506" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
