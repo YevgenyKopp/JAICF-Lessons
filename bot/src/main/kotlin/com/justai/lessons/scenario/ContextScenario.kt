@@ -38,6 +38,9 @@ val contextScenario = Scenario {
     }
 
     fallback {
-        sayFallbackOrTransfer()
+        sayFallbackOrTransfer(
+            fallbackText = "Ничего не понял, повтори",
+            transferText = "Давай лучше переведу на оператора"
+        )
     }
 }

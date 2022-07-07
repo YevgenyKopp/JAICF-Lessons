@@ -19,15 +19,15 @@ fun DefaultActionContext.getCity(): CityData =
 fun DefaultActionContext.getTime(): TimeData =
     Gson().fromJson(activator.caila?.slots?.get("Time"), TimeData::class.java)
 
-fun DefaultActionContext.sayFallbackOrTransfer() {
+fun DefaultActionContext.sayFallbackOrTransfer(fallbackText: String, transferText: String) {
     val counter = if (context.previousState == context.dialogContext.currentState) context.stateCounter else 0
 
     if (counter < 2)
-        reactions.say("Ничего не понял, повтори")
+        reactions.say(fallbackText)
     else {
-        reactions.say("Давай переведу на оператора лучше")
+        reactions.say(transferText)
         reactions.telephony?.transferCall("34593483")
     }
-    
+
     context.stateCounter = counter + 1
 }

@@ -5,6 +5,7 @@ import com.justai.jaicf.builder.Scenario
 import com.justai.jaicf.channel.jaicp.reactions.telephony
 import com.justai.lessons.extension.getCity
 import com.justai.lessons.extension.getTime
+import com.justai.lessons.extension.sayFallbackOrTransfer
 
 val mainScenario = Scenario {
 
@@ -47,6 +48,19 @@ val mainScenario = Scenario {
                         reactions.go("../../../../GoodBye")
                     }
                 }
+                fallback {
+                    sayFallbackOrTransfer(
+                        fallbackText = "Простите, ещё раз, в какой город привезти?",
+                        transferText = "Для определения города свяжу вас с нашим специалистом"
+                    )
+                }
+            }
+
+            fallback {
+                sayFallbackOrTransfer(
+                    fallbackText = "Простите, ещё раз, какой слон вас интересует?",
+                    transferText = "Для определения типа слона свяжу вас с нашим специалистом"
+                )
             }
         }
 
