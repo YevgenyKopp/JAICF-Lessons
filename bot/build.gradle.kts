@@ -17,6 +17,7 @@ version = "1.0-SNAPSHOT"
 val jaicf = "1.2.4"
 val logback = "1.2.10"
 val ktor = "1.5.1"
+val mongo = "3.1.8"
 
 repositories {
     mavenLocal()
@@ -28,6 +29,7 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
 
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.data:spring-data-mongodb:$mongo")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
 
     implementation("ch.qos.logback:logback-classic:$logback")
@@ -36,6 +38,7 @@ dependencies {
     implementation("com.just-ai.jaicf:jaicp:$jaicf")
     implementation("com.just-ai.jaicf:caila:$jaicf")
     implementation("com.just-ai.jaicf:telegram:$jaicf")
+    implementation("com.just-ai.jaicf:mongo:$jaicf")
 
     implementation("io.ktor:ktor-client-serialization:$ktor")
     implementation("io.ktor:ktor-client-apache:$ktor")

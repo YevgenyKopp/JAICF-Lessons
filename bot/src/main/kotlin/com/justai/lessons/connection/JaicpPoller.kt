@@ -3,6 +3,7 @@ package com.justai.lessons.connection
 import com.justai.jaicf.api.BotApi
 import com.justai.jaicf.channel.jaicp.JaicpPollingConnector
 import com.justai.jaicf.channel.jaicp.channels.TelephonyChannel
+import com.justai.jaicf.channel.telegram.TelegramChannel
 import com.justai.lessons.configuration.BotConfiguration
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -26,7 +27,8 @@ class JaicpPoller(
                 botApi = botApi,
                 accessToken = botConfiguration.token,
                 channels = listOf(
-                    TelephonyChannel
+                    TelephonyChannel,
+                    TelegramChannel
                 )
             ).runBlocking()
         }

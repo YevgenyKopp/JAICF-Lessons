@@ -3,7 +3,6 @@ package com.justai.lessons.scenario
 import com.justai.jaicf.activator.caila.cailaEntity
 import com.justai.jaicf.builder.Scenario
 import com.justai.jaicf.channel.jaicp.reactions.telephony
-import com.justai.lessons.extension.ElephantService
 import com.justai.lessons.extension.getCity
 import com.justai.lessons.extension.getTime
 
@@ -30,16 +29,22 @@ val mainScenario = Scenario {
 
             state("ElephantType") {
                 activators {
-                    cailaEntity("mystem.persn")
-                    catchAll()
+                    cailaEntity("elaphantType")
                 }
                 action {
-                    if (ElephantService.isAvailable(request.input)) {
-                        reactions.say("Окей, привезём")
-                        reactions.go("../../../GoodBye")
-                    } else {
-                        reactions.say("Ой, а таких у нас нет, давай другого?")
-                        reactions.changeState("..")
+                    context.session["elephantType"] = activator.cailaEntity?.value
+                    reactions.say("А в какой город везти?")
+                }
+                state("City") {
+                    activators {
+                        cailaEntity("city")
+                    }
+                    action {
+                        activator.cailaEntity?.value?.let {
+                            reactions.say("Отлично! привезём ${context.session["elephantType"]} в $it")
+                        }
+
+                        reactions.go("../../../../GoodBye")
                     }
                 }
             }
