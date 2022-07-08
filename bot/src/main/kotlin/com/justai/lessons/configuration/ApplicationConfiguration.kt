@@ -11,7 +11,7 @@ import com.justai.jaicf.channel.jaicp.logging.JaicpConversationLogger
 import com.justai.jaicf.channel.telegram.TelegramChannel
 import com.justai.jaicf.context.manager.mongo.MongoBotContextManager
 import com.justai.jaicf.logging.Slf4jConversationLogger
-import com.justai.lessons.scenario.contextScenario
+import com.justai.lessons.scenario.configScenario
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.data.mongodb.MongoDatabaseFactory
@@ -24,7 +24,7 @@ class ApplicationConfiguration(
     @Bean
     fun botApi() =
         BotEngine(
-            scenario = contextScenario,
+            scenario = configScenario,
             defaultContextManager = mongoDatabaseFactory.createContextManager(botConfiguration.mongoCollection),
             activators = arrayOf(
                 RegexActivator,

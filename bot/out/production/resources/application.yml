@@ -1,9 +1,0 @@
-spring:
-  profiles:
-    active: "dev"
-  config:
-    import:
-      - optional:classpath:/local.application.yml
-
-server:
-  port: 10010

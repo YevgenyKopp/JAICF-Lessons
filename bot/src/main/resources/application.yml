@@ -4,6 +4,8 @@ spring:
   config:
     import:
       - optional:classpath:/local.application.yml
+      - classpath:/bootstrap.yml
+      - classpath:/phrases.yml
 
 server:
   port: 10010

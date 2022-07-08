@@ -1,7 +1,7 @@
 plugins {
     application
 
-    kotlin("jvm") version "1.5.20"
+    kotlin("jvm") version "1.7.10"
     kotlin("plugin.serialization") version "1.5.20"
 
     id("com.justai.jaicf.jaicp-build-plugin") version "0.1.1"
@@ -18,6 +18,7 @@ val jaicf = "1.2.4"
 val logback = "1.2.10"
 val ktor = "1.5.1"
 val mongo = "3.1.8"
+val springCloud = "3.1.2"
 
 repositories {
     mavenLocal()
@@ -50,4 +51,18 @@ dependencies {
     implementation("javax.servlet:javax.servlet-api:3.1.0")
 
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit5:1.6.10")
+
+    implementation("org.springframework.cloud:spring-cloud-starter-config:$springCloud")
+    implementation("org.springframework.cloud:spring-cloud-starter-bootstrap:$springCloud")
+
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.6.0")
+}
+
+tasks {
+    test {
+        useJUnitPlatform()
+    }
 }

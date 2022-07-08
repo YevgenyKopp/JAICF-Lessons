@@ -2,6 +2,6 @@
 /**/build/
 !/**/src/**/build/
 /**/application-local.yml
-/**/local.application.yml
+#/**/local.application.yml
 *.log
 telenium.properties

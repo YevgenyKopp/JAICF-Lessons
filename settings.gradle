@@ -1,3 +1,4 @@
 rootProject.name = 'lessons-2022'
 include 'bot'
+include 'configuration'
 

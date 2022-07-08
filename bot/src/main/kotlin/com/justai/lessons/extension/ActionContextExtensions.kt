@@ -7,6 +7,8 @@ import com.justai.jaicf.context.DefaultActionContext
 import com.justai.lessons.extension.model.CityData
 import com.justai.lessons.extension.model.CustomCurrency
 import com.justai.lessons.extension.model.TimeData
+import com.justai.lessons.services.phrases.Phrase
+import com.justai.lessons.services.phrases.Phrases
 
 fun DefaultActionContext.getCustomCurrency() =
     activator.caila?.entities?.first { it.entity == "Currency" }?.value?.let {
@@ -30,4 +32,34 @@ fun DefaultActionContext.sayFallbackOrTransfer(fallbackText: String, transferTex
     }
 
     context.stateCounter = counter + 1
+}
+
+fun DefaultActionContext.sayDefault(phrase: Phrase) {
+    PhraseContentProvider.getByPhrase(phrase)?.default?.let { defaultPhrases ->
+        val counter = context.session.getOrPut("DefaultPhrase${phrase.name}") { 0 } as Int
+
+        reactions.say(defaultPhrases[counter % defaultPhrases.size])
+
+        context.session["DefaultPhrase${phrase.name}"] = counter + 1
+    } ?: error("Cannot get default texts for phrase: ${phrase.name}")
+}
+
+fun DefaultActionContext.sayFallbackOrBye(phrase: Phrase) {
+    PhraseContentProvider.getByPhrase(phrase)?.fallback?.let { fallbackPhrases ->
+        val counter = context.session.getOrPut("FallbackPhrase${phrase.name}") { 0 } as Int
+
+        if (counter < fallbackPhrases.size)
+            reactions.say(fallbackPhrases[counter])
+        else
+            sayByeAndHangup()
+
+        context.session["FallbackPhrase${phrase.name}"] = counter + 1
+    } ?: error("Cannot get fallback texts for phrase: ${phrase.name}")
+}
+
+fun DefaultActionContext.sayByeAndHangup() {
+    PhraseContentProvider.getByPhrase(Phrases.bye)?.default?.get(0)?.let {
+        reactions.say(it)
+        reactions.telephony?.hangup()
+    } ?: error("Cannot get bye phrase")
 }
