@@ -4,11 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c4f4af71-0ee4-4dcf-a3f1-4e16af39278b" name="Changes" comment="add gitignore">
-      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/model/CityData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/model/TimeData.kt" afterDir="false" />
+    <list default="true" id="c4f4af71-0ee4-4dcf-a3f1-4e16af39278b" name="Changes" comment="add autotests;&#10;add config server&#10;add BargeInContextScenario.kt">
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/BargeInContextScenario.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/ConfigScenario.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/TestScenario.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services/phrases/PhraseContentProvider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services/phrases/Phrases.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/main/resources/phrases.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/test/kotlin/ScenarioTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bot/src/test/kotlin/bot/MyBotTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration/src/main/kotlin/com/justai/lessons/Application.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuration/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/bot/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/out/production/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/Application.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/Application.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/configuration/ApplicationConfiguration.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/configuration/ApplicationConfiguration.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/configuration/Configurations.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/configuration/Configurations.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/ActionContextExtensions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/ActionContextExtensions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/MainScenario.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/MainScenario.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/Beans.kt" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/Beans.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/scenario/StartScenario.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bot/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bot/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +47,80 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/bot">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+                <item name="bot" type="2d1252cf:ModuleNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+                <item name="bot" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+                <item name="bot" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+                <item name="bot" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+                <item name="bot" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="distribution" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+                <item name="bot" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+                <item name="bot" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="help" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+                <item name="bot" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="other" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="lessons-2022" type="f1a62948:ProjectNode" />
+                <item name="bot" type="2d1252cf:ModuleNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -39,8 +131,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
-        <option value="Kotlin File" />
         <option value="Kotlin Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -55,6 +147,10 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.data/spring-data-mongodb/3.1.8/171742536cdbb5713490eb2c0394ef02e177d8d7/spring-data-mongodb-3.1.8-sources.jar!/org/springframework/data/mongodb/MongoDatabaseFactory.java" root0="SKIP_INSPECTION" />
+    <setting file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.just-ai.jaicf/mongo/1.2.4/8617f4abb5dde67df0f480a6fd8a086988e5176/mongo-1.2.4-sources.jar!/com/justai/jaicf/context/manager/mongo/MongoBotContextManager.kt" root0="SKIP_INSPECTION" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -67,14 +163,15 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/OneDrive - i-Space/Documents/JAICF edu/project" />
+    <property name="last_opened_file_path" value="$USER_HOME$/config-files" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.17" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin.scripting" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/bot/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services/currency" />
       <recent name="$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/services" />
@@ -82,15 +179,78 @@
     </key>
   </component>
   <component name="RunManager" selected="Kotlin.ApplicationKt">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.justai.lessons.Main" />
-      <module name="lessons-2022.bot.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.justai.lessons.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration name="MyScenarioTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":bot:test" />
+            <option value="--tests" />
+            <option value="&quot;MyScenarioTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MyScenarioTest.check scenario" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":bot:test" />
+            <option value="--tests" />
+            <option value="&quot;MyScenarioTest.check scenario&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="MyScenarioTest.should activate agree from Order by query yes" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":bot:test" />
+            <option value="--tests" />
+            <option value="&quot;MyScenarioTest.should activate agree from Order by query yes&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ApplicationKt (1)" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.justai.lessons.ApplicationKt" />
+      <module name="lessons-2022.configuration.main" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,38 +262,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConfigurationsKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.justai.lessons.configuration.ConfigurationsKt" />
-      <module name="lessons-2022.bot.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.justai.lessons.MainKt" />
-      <module name="lessons-2022.bot.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="lessons-2022" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="lessons-2022" />
-      <option name="filePath" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Kotlin.ApplicationKt" />
-        <item itemvalue="Kotlin.ConfigurationsKt" />
-        <item itemvalue="Kotlin.MainKt" />
+        <item itemvalue="Kotlin.ApplicationKt (1)" />
+        <item itemvalue="Gradle.MyScenarioTest" />
+        <item itemvalue="Gradle.MyScenarioTest.check scenario" />
+        <item itemvalue="Gradle.MyScenarioTest.should activate agree from Order by query yes" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +316,28 @@
       <option name="project" value="LOCAL" />
       <updated>1657085041240</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add mongo context manager; &#10;add ContextScenario.kt;&#10;add webhook connector">
+      <created>1657195875408</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1657195875408</updated>
+    </task>
+    <task id="LOCAL-00007" summary="change sayFallbackOrTransfer">
+      <created>1657203349085</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1657203349085</updated>
+    </task>
+    <task id="LOCAL-00008" summary="add autotests;&#10;add config server&#10;add BargeInContextScenario.kt">
+      <created>1657288439365</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1657288439365</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -194,7 +350,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
@@ -202,10 +357,30 @@
     <MESSAGE value="add main scenario" />
     <MESSAGE value="add gitignore" />
     <MESSAGE value="Revert &quot;add caila&quot;&#10;&#10;This reverts commit c5caf506" />
-    <option name="LAST_COMMIT_MESSAGE" value="Revert &quot;add caila&quot;&#10;&#10;This reverts commit c5caf506" />
+    <MESSAGE value="add mongo context manager; &#10;add ContextScenario.kt;&#10;add webhook connector" />
+    <MESSAGE value="change sayFallbackOrTransfer" />
+    <MESSAGE value="add autotests;&#10;add config server&#10;add BargeInContextScenario.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="add autotests;&#10;add config server&#10;add BargeInContextScenario.kt" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/bot/src/main/kotlin/com/justai/lessons/extension/ActionContextExtensions.kt</url>
+          <line>38</line>
+          <properties>
+            <option name="lambda-ordinal" value="-1" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/lessons_2022$CommonExtensionsKt.ic" NAME="CommonExtensionsKt Coverage Results" MODIFIED="1657194523728" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
